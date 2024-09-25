@@ -1,8 +1,9 @@
 from animeflv import AnimeFLV
+'''
+Base Functionality of the future MAnagement System
+'''
 
-# Crear una instancia de la API
 with AnimeFLV() as api:
-    # Obtener información del anime por ID
     anime_id = input("Anime-ID:")
     anime_info = api.get_anime_info(anime_id)
 
@@ -12,4 +13,3 @@ with AnimeFLV() as api:
         print(episode.id)
         for link in download_links:
             print(link.url)
-
